@@ -339,13 +339,3 @@ gh repo clone username/repo-name
 # Skapa repository
 gh repo create my-new-repo
 ```
-
-### Github Pages
-
-Ni ska få skapa ett repo där ni presenterar er själva eller egentligen vad ni vill så länge det är inom skolramen, och så kan ni också lista projekten som ni gör under utbildningens gång om ni vill.
-
-Repot som man skapar med namnet _"username.github.io"_ blir kontots hemsida kan man säga.
-
-Här är en länk som beskriver det mer i detalj som ni kan följa:
-
-<https://medium.com/@anilemrah/how-to-publish-your-html-with-github-pages-8f3f854e7d4>
