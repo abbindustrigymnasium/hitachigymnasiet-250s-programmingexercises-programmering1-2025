@@ -83,9 +83,7 @@ Det finns flera sätt att testa JavaScript-kod. Här är två rekommenderade met
 
 Använd en online-editor för snabba tester:
 
-- [Plunker](https://plnkr.co/edit/9OnAVyIK7Tk1cP6d)
-- [CodePen](https://codepen.io)
-- [JSFiddle](https://jsfiddle.net)
+- [OneCompiler](https://onecompiler.com)
 
 ---
 

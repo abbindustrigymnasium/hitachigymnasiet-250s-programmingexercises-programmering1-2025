@@ -3,6 +3,9 @@
 #include <string>
 using namespace std;
 
+// OBS: Alla övningar använder hårdkodade värden istället för cin
+// för att fungera i online miljöer som OneCompiler
+
 // Övning 1.1.1 - Grundläggande variabler
 void ovning111() {
     string name = "Kalle Kula";
@@ -100,9 +103,7 @@ void ovning15() {
         cout << "Du får inte ta körkort!" << endl;
     }
     
-    string name;
-    cout << "Ange ditt namn: ";
-    cin >> name;
+    string name = "Kalle"; // Hårdkodat värde istället för cin
     
     if (name == "Kalle") {
         cout << "Du heter Kalle" << endl;
@@ -275,7 +276,7 @@ void ovning111() {
 }
 
 int main() {
-    cout << "=== C++ Övningar Lösningar ===" << endl << endl;
+    cout << "=== C++ Övningar Lösningar (Utan cin - fungerar i OneCompiler) ===" << endl << endl;
     
     cout << "1.1.1 - Grundläggande variabler:" << endl;
     ovning111();

@@ -2,11 +2,12 @@
 
 ## Instruktioner
 
-**Filstruktur:**
+**Editor:**
+Använd OneCompiler för övningarna
 
-1. Skapa en C++-fil med namnet `övningar-cpp.cpp`
-2. Skapa separata C++-filer för varje övning: `övning1.1.cpp`, `övning1.2.cpp`, etc.
-3. Kompilera varje fil separat med `g++ övning1.1.cpp -o övning1.1`
+<a href="https://onecompiler.com/cpp">https://onecompiler.com/cpp</a>
+
+**Viktigt:** Alla övningar är uppdaterade för att fungera utan `cin` (användarinput) eftersom det inte fungerar i online miljöer som OneCompiler.
 
 **Exempel på C++-struktur:**
 
@@ -31,10 +32,7 @@ int main() {
 **Arbetsprocess:**
 
 - Använd `cout` för att visa resultat i terminalen
-- Använd `cin` för att läsa in data från användaren
-- Kompilera med `g++ filnamn.cpp -o körbar`
-- Kör med `./körbar` (Linux/macOS) eller `körbar.exe` (Windows)
-- Ladda upp alla filer till GitHub när du är klar
+- Använd hårdkodade värden istället för `cin` (fungerar bättre i online miljöer)
 
 ## Innehåll
 
@@ -93,9 +91,6 @@ int main() {
 3. `"3.14"`
 4. `true`
 5. `'A'`
-6. `nullptr`
-
-**Kontroll:** Skriv sedan ut typerna med `cout << typeid(värde).name()` för att se om du hade rätt.
 
 ## 1.3 Operatorer
 
@@ -105,16 +100,6 @@ int main() {
 
 1. Skapa 2 variabler med valfria tal (t.ex. `tal1 = 5`, `tal2 = 3`)
 2. Skriv ut addition, subtraktion och multiplikation av talen med `cout`
-
-### **Övning 1.3.2 - Prefix och postfix**
-
-**Fråga:** Vilka är de slutliga värdena för `a`, `b`, `c` och `d`?
-
-```cpp
-int a = 1, b = 1;
-int c = ++a; // ?
-int d = b++; // ?
-```
 
 **Kontroll:** Bekräfta genom att skriva ut värdena med `cout`.
 
@@ -173,25 +158,25 @@ int x = 1 + (a *= 2);
 
 **Övning 1. If sats**
 
-1. Ta ett namn från användaren med `cin` och tilldela det till en variabel name.
+1. Skapa en variabel `name` med värdet "Kalle".
 2. Använd en if-sats för att kontrollera om namnet är "Kalle". Stämmer det skriv ut "Du heter Kalle".
 3. Utöka sedan med else del där du skriver ut "Du heter inte Kalle!".
 
 **Övning 2. Namnet C++**
-Med `if..else`-konstruktionen, skriv koden som frågar: "Vad är det officiella namnet på C++?"
+Med `if..else`-konstruktionen, skriv koden som kontrollerar om namnet "C Plus Plus" är korrekt.
 
-Använd `cin` för att läsa in ett värde från användaren.
+Skapa en variabel `userAnswer` med värdet "C Plus Plus".
 
-Om besökaren skriver in "C Plus Plus", skriver du ut "Korrekt!", Annars skriver du ut: "Du vet inte? C Plus Plus!"
+Om svaret är "C Plus Plus", skriv ut "Korrekt!", Annars skriv ut: "Du vet inte? C Plus Plus!"
 
 **Övning 3. Visa tecknet**
-Använd `if..else` och skriv koden som tar in ett nummer med `cin` och visar sedan beroende på värdet:
+Använd `if..else` och skriv koden som kontrollerar ett nummer och visar sedan beroende på värdet:
+
+Skapa en variabel `number` med värdet 5.
 
 - `1`, om värdet är större än noll,
 - `-1`, om mindre än noll,
 - `0`, om det är lika med noll.
-
-I denna uppgift antar vi att vi alltid får in ett nummer.
 
 **Övning 4. Skriv om 'if' med '?'**
 Skriv om `if` så att vi istället använder `?` operatorn:
@@ -301,9 +286,7 @@ switch (browser) {
 Skriv om koden nedan med hjälp av ett enda `switch`-sats:
 
 ```cpp
-int a;
-cout << "a? ";
-cin >> a;
+int a = 2; // Hårdkodat värde istället för cin
 
 if (a == 0) {
     cout << 0 << endl;

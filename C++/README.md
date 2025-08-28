@@ -37,51 +37,17 @@ C++ är ett kraftfullt programmeringsspråk som kombinerar objektorienterad prog
 ### Huvudresurser
 
 - [W3Schools C++](https://www.w3schools.com/cpp/default.asp)
-- [Learn C++ - The Cherno](https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)
-
 ---
 
 ## 0. Testmiljö
 
-Det finns flera sätt att testa C++-kod. Här är två rekommenderade metoder:
+Det finns flera sätt att testa C++-kod. Här är rekommenderade metoder:
 
-### Metod 1: Lokal utvecklingsmiljö
-
-1. **Installera kompilator:**
-   - Windows: Installera MinGW eller Visual Studio Community
-   - macOS: Installera Xcode Command Line Tools
-   - Linux: Installera g++ med `sudo apt-get install g++`
-
-2. **Skapa testfil:**
-   - Skapa en fil med namnet `test.cpp`
-   - Lägg till följande kod:
-
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-    int x = 5;
-    cout << x << endl;
-    // Skriv din C++-kod här
-    return 0;
-}
-```
-
-3. **Kompilera och kör:**
-   - Öppna terminal/kommandotolk
-   - Navigera till mappen med `cd sökväg/till/mapp`
-   - Kompilera med `g++ test.cpp -o test`
-   - Kör med `./test` (Linux/macOS) eller `test.exe` (Windows)
-
-### Metod 2: Online-miljö
+### Metod: Online-miljö
 
 Använd en online-kompilator för snabba tester:
 
-- [OnlineGDB](https://www.onlinegdb.com/online_c++_compiler)
-- [Replit](https://replit.com/languages/cpp)
-- [CodeChef](https://www.codechef.com/ide)
-
+- [OneCompiler](https://onecompiler.com/cpp)
 ---
 
 ## 1.1 Variabler
@@ -113,8 +79,6 @@ C++ har flera olika datatyper för att lagra olika sorters information.
 Operatorer används för att utföra beräkningar och jämförelser mellan variabler och värden.
 
 ### Resurser
-
-- [W3Schools - C++ Operators](https://www.w3schools.com/cpp/cpp_operators.asp)
 
 ### Övningsuppgifter
 
