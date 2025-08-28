@@ -202,6 +202,26 @@ git add *.html
 - Eller högerklicka → "Stage Changes"
 - "+" bredvid "Changes" för att stage alla
 
+### 3.1 Ta bort från staging (Reset)
+
+#### Terminal
+
+```bash
+# Ta bort en fil från staging
+git reset HEAD filename.txt
+
+# Ta bort alla filer från staging
+git reset HEAD
+
+# Ta bort alla filer från staging (modern syntax)
+git restore --staged .
+```
+
+#### VS Code
+
+- Klicka **-** bredvid fil i Source Control
+- Eller högerklicka → "Unstage Changes"
+
 ### 4. Commit (spara ändringar)
 
 #### Terminal
