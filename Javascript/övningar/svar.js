@@ -15,4 +15,8 @@ pi = 8
 
 console.log(pi)
 
+// 1.2.1
+
+console.log(typeof(0));
+
 

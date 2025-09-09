@@ -30,7 +30,7 @@
 **Arbetsprocess:**
 
 - Använd `console.log()` för att visa resultat i webbläsarens konsol (F12)
-- Använd `alert()` när det specificeras i övningen
+- Använd `console.log()` när det specificeras i övningen
 - Kommentera ut andra script-taggar när du arbetar med en specifik övning
 - Ladda upp alla filer till GitHub när du är klar
 
@@ -65,7 +65,7 @@
 1. Deklarera två variabler: `admin` och `name`
 2. Tilldela värdet `"John"` till `name`
 3. Kopiera värdet från `name` till `admin`
-4. Skriv ut värdet på `admin` med `alert()` (ska visa "John")
+4. Skriv ut värdet på `admin` med `console.log()` (ska visa "John")
 
 ### **Övning 1.1.3 - Variabelnamngivning**
 
@@ -76,7 +76,7 @@
 
 1. Skapa en konstant `pi` med pi-värdet (3 decimaler)
 2. Försök tilldela `pi` ett annat värde
-3. Skriv ut `pi` med `alert()` - vad händer och varför?
+3. Skriv ut `pi` med `console.log()` - vad händer och varför?
 
 ## 1.2 Datatyper
 
@@ -129,31 +129,17 @@ let a = 2;
 let x = 1 + (a *= 2);
 ```
 
-**Kontroll:** Bekräfta med `alert()`.
+**Kontroll:** Bekräfta med `console.log()`.
 
 ### **Övning 1.3.4 - Typkonvertering**
 
-**Fråga:** Vad blir resultatet av dessa uttryck? Gissa först!
+**Fråga:** Vad blir resultatet av detta uttryck? Gissa först!
 
 ```javascript
-1.  "" + 1 + 0
-2.  "" - 1 + 0
-3.  true + false
-4.  6 / "3"
-5.  "2" * "3"
-6.  4 + 5 + "px"
-7.  "$" + 4 + 5
-8.  "4" - 2
-9.  "4px" - 2
-10. 7 / 0
-11. "  -9  " + 5
-12. "  -9  " - 5
-13. null + 1
-14. undefined + 1
-15. " \t \n" - 2
+"" + 1 + 0
 ```
 
-**Kontroll:** Bekräfta med `alert()`.
+**Kontroll:** Bekräfta med `console.log()`.
 
 ## 1.4 Jämförelser
 
@@ -167,10 +153,6 @@ let x = 1 + (a *= 2);
 1. 5 > 4
 2. "apple" > "pineapple"
 3. "2" > "12"
-4. undefined == null
-5. undefined === null
-6. null == "\n0\n"
-7. null === +"\n0\n"
 ```
 
 **Kontroll:** Bekräfta med `console.log()`.
@@ -201,7 +183,7 @@ Om besökaren skriver in "ECMAScript", skriver du ut "Korrekt!", Annars skriver 
 <br>
 
 **Övning 3. Visa tecknet**<br>
-Använd `if..else` och skriv koden som tar in ett nummer med `prompt()` och visar sedan med `alert()` beroende på värdet:
+Använd `if..else` och skriv koden som tar in ett nummer med `prompt()` och visar sedan med `console.log()` beroende på värdet:
 
 - `1`, om värdet är större än noll,
 - `-1`, om mindre än noll,
@@ -244,7 +226,7 @@ Båda looparna skriver ut samma värden eller inte?
 ```
 let i = 0
 while (++i < 5) {
-  alert( i )
+  console.log( i )
 }
 ```
 
@@ -253,7 +235,7 @@ while (++i < 5) {
 ```
 let i = 0;
 while (i++ < 5) {
-  alert( i );
+  console.log( i );
 }
 ```
 
@@ -266,7 +248,7 @@ Båda looparna skriver ut samma värden eller inte?
 
 ```
 for (let i = 0; i < 5; i++) {
-  alert( i );
+  console.log( i );
 }
 
 ```
@@ -275,7 +257,7 @@ for (let i = 0; i < 5; i++) {
 
 ```
 for (let i = 0; i < 5; ++i) {
-  alert( i );
+  console.log( i );
 }
 
 ```
@@ -288,7 +270,7 @@ Skriv om koden som ändrar `for`-loopen till `while`-loopen utan att ändra dess
 
 ```
 for (let i = 0; i < 3; i++) {
-  alert( `number ${i}!` );
+  console.log( `number ${i}!` );
 }
 ```
 
@@ -302,18 +284,18 @@ Skriv koden med `if..else` som motsvarar följande switch:
 ```
 switch (browser) {
   case 'Edge':
-    alert( "You've got the Edge!" );
+    console.log( "You've got the Edge!" );
     break;
 
   case 'Chrome':
   case 'Firefox':
   case 'Safari':
   case 'Opera':
-    alert( 'Okay we support these browsers too' );
+    console.log( 'Okay we support these browsers too' );
     break;
 
   default:
-    alert( 'We hope that this page looks ok!' );
+    console.log( 'We hope that this page looks ok!' );
 }
 ```
 
@@ -324,14 +306,14 @@ Skriv im koden nedan med hjälp av ett enda `switch`-sats:
 let a = +prompt('a?', '');
 
 if (a == 0) {
-  alert( 0 );
+  console.log( 0 );
 }
 if (a == 1) {
-  alert( 1 );
+  console.log( 1 );
 }
 
 if (a == 2 || a == 3) {
-  alert( '2,3' );
+  console( '2,3' );
 }
 ```
 
@@ -342,7 +324,7 @@ if (a == 2 || a == 3) {
 ### **Övning 1.8.1 - Enkel adderingsfunktion**
 
 1. Skapa en funktion `add` som tar in 1 parameter `x` och returnerar `x + x`
-2. Anropa funktionen med värdet 5 och skriv ut resultatet med `alert()`
+2. Anropa funktionen med värdet 5 och skriv ut resultatet med `console.log()`
 
 ### **Övning 1.8.2 - Funktioner med if-satser**
 
@@ -353,7 +335,7 @@ function checkAge(age) {
   if (age > 18) {
     return true;
   } else {
-    alert("Du är för ung tyvärr!");
+    console.log("Du är för ung tyvärr!");
   }
 }
 ```
@@ -365,7 +347,7 @@ function checkAge(age) {
   if (age > 18) {
     return true;
   }
-  alert("Du är för ung tyvärr!");
+  console.log("Du är för ung tyvärr!");
 }
 ```
 
@@ -381,7 +363,7 @@ function checkAge(age) {
     return true;
   } else {
     // ...
-    alert('Du är för ung tyvärr!');
+    console.log('Du är för ung tyvärr!');
   }
 }
 ```
@@ -456,11 +438,11 @@ Bör fungera så här:
 ```
 let schedule = {};
 
-alert( isEmpty(schedule) ); // true
+console.log( isEmpty(schedule) ); // true
 
 schedule["8:30"] = "get up";
 
-alert( isEmpty(schedule) ); // false
+console.log( isEmpty(schedule) ); // false
 ```
 
 **Övning 3.Summera objekt egenskaper**<br>
@@ -513,7 +495,7 @@ P.S. Använd `typeof()` för att kontrollera ifall det är ett nummer.
 
 1. Skapa en array med namn på alla gruppmedlemmar.
 2. Använd en for-loop och loopa igenom alla gruppmedlemmar i arrayen/listan.
-3. För varje medlem skriv ut namnet med `alert()`.
+3. För varje medlem skriv ut namnet med `console.log()`.
 
 ### **Övning 1.11.2 - Array-referenser**
 
@@ -527,7 +509,7 @@ let shoppingCart = fruits;
 shoppingCart.push("Banana");
 
 // Vad finns i fruits nu?
-alert(fruits.length); // ?
+console.log(fruits.length); // ?
 ```
 
 **Kontroll:** Kör koden och förklara resultatet. Varför blev det så?
