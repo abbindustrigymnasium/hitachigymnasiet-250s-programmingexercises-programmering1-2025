@@ -34,6 +34,181 @@ Efter dessa övningar kommer du att kunna:
 - Skapa interaktiva formulär
 - Bygga enkla webbapplikationer
 
+## Lägga till JavaScript i HTML
+
+Det finns två huvudsakliga sätt att lägga till JavaScript i en HTML-sida:
+
+### 1. Internal JavaScript (I `<script>`-taggar)
+
+JavaScript-kod placeras direkt i HTML-filen inom `<script>`-taggar.
+
+**I `<head>`-sektionen:**
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Min Sida</title>
+    <script>
+      // JavaScript här körs INNAN HTML-elementen laddas
+      // Använd DOMContentLoaded för att vänta på att sidan laddas
+      document.addEventListener("DOMContentLoaded", () => {
+        const heading = document.querySelector("h1");
+        heading.textContent = "Sidan är laddad!";
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Original rubrik</h1>
+  </body>
+</html>
+```
+
+**I slutet av `<body>` (Rekommenderat):**
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Min Sida</title>
+  </head>
+  <body>
+    <h1 id="heading">Välkommen</h1>
+    <button id="myBtn">Klicka mig</button>
+
+    <script>
+      // JavaScript här körs EFTER att HTML-elementen har laddats
+      const button = document.querySelector("#myBtn");
+      button.addEventListener("click", () => {
+        alert("Knappen klickades!");
+      });
+    </script>
+  </body>
+</html>
+```
+
+**Fördelar:**
+
+- Enklare för små projekt
+- All kod i en fil
+- Inget behov av externa filer
+
+**Nackdelar:**
+
+- Blir rörigt med mycket kod
+- Kod kan inte återanvändas mellan flera sidor
+
+### 2. External JavaScript (Extern fil) - **REKOMMENDERAT**
+
+JavaScript-kod placeras i en separat `.js`-fil som länkas till HTML-filen.
+
+**HTML-fil (index.html):**
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Min Sida</title>
+  </head>
+  <body>
+    <h1 id="heading">Välkommen</h1>
+    <button id="myBtn">Klicka mig</button>
+
+    <!-- Länka till extern JavaScript-fil -->
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+**JavaScript-fil (script.js):**
+
+```javascript
+const button = document.querySelector("#myBtn");
+const heading = document.querySelector("#heading");
+
+button.addEventListener("click", () => {
+  heading.textContent = "Du klickade på knappen!";
+});
+```
+
+**Fördelar:**
+
+- Renare och mer organiserad kod
+- Kod kan återanvändas på flera sidor
+- Enklare att underhålla
+- Webbläsaren kan cacha JavaScript-filen (snabbare laddning)
+
+### Var ska `<script>`-taggen placeras?
+
+**1. I slutet av `<body>` (Traditionellt sätt):**
+
+```html
+<body>
+  <h1>Min sida</h1>
+  <p>Innehåll...</p>
+
+  <script src="script.js"></script>
+</body>
+```
+
+✅ JavaScript körs efter att HTML har laddats
+
+**2. I `<head>` med `defer` (Modernt sätt):**
+
+```html
+<head>
+  <script src="script.js" defer></script>
+</head>
+```
+
+✅ Scriptet laddas parallellt men körs efter HTML är färdigt  
+✅ Rekommenderat för modern utveckling
+
+**3. I `<head>` med `async`:**
+
+```html
+<head>
+  <script src="script.js" async></script>
+</head>
+```
+
+⚠️ Scriptet körs så fort det är laddat (kan orsaka problem om DOM inte är redo)
+
+### Sammanfattning - Bästa praxis
+
+För övningarna, använd detta mönster:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Övning</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Min Webbsida</h1>
+    <button id="myBtn">Klicka här</button>
+  </body>
+</html>
+```
+
+Eller alternativt:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Övning</title>
+  </head>
+  <body>
+    <h1>Min Webbsida</h1>
+    <button id="myBtn">Klicka här</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
 ## Vanliga DOM-funktioner
 
 ### 1. Hitta Element (Selectors)
